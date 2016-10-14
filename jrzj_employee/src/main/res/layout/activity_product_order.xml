@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/home_topleft"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_150"
+        android:background="@color/btn_blue">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/ds_30"
+            android:layout_height="@dimen/ds_50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ds_50"
+            android:background="@drawable/xiangyouxdpi_03"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="生成订单"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/fs_60" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_190"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ds_100"
+        android:paddingLeft="@dimen/ds_130"
+        android:paddingRight="@dimen/ds_150">
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/cb_service_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cb_product_order"
+            android:button="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ds_40"
+            android:text="服务费"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_50" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_service_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="#0570b6"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/btn_gray" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_50" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_15"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/ds_100"
+        android:paddingLeft="@dimen/ds_130"
+        android:paddingRight="@dimen/ds_150">
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/cb_material"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cb_product_order"
+            android:button="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ds_40"
+            android:text="主材配件费"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_50" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_material_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="#0570b6"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/btn_gray" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_50" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_15"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/ds_130"
+        android:paddingRight="@dimen/ds_150">
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/cb_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cb_product_order"
+            android:button="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ds_40"
+            android:text="增项费"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_50" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_other_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="#0570b6"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/btn_gray" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_50" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ds_100"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ds_200"
+            android:text="合计："
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_50" />
+
+        <TextView
+            android:id="@+id/tv_totle_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ds_20"
+            android:text="0.0元"
+            android:textColor="#0570b6"
+            android:textSize="@dimen/fs_50" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_commit"
+        style="@style/button_click"
+        android:layout_marginTop="@dimen/ds_200"
+        android:text="提交" />
+
+</LinearLayout>

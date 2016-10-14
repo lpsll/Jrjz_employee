@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_titlebar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/navi">
+
+            <TextView
+                android:id="@+id/base_titlebar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/ds_30"
+                android:clickable="true"
+                android:drawablePadding="@dimen/ds_6"
+                android:gravity="center"
+                android:paddingLeft="@dimen/ds_42"
+                android:paddingRight="@dimen/ds_15"
+                android:text=""
+                android:textColor="@color/color_ff"
+                android:textSize="@dimen/fs_45" />
+
+            <TextView
+                android:id="@+id/base_titlebar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/color_ff"
+                android:textSize="@dimen/fs_60" />
+
+            <TextView
+                android:id="@+id/base_titlebar_ensure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/ds_20"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/ds_48"
+                android:paddingRight="@dimen/ds_42"
+                android:text=""
+                android:textColor="@color/color_ff"
+                android:textSize="@dimen/fs_45" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/base_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_1"
+        android:background="@color/color_cc" />
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_40"
+        android:background="#f5f5f5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/ds_25">
+
+        <TextView
+            android:id="@+id/tv_fuwu"
+            style="@style/textview_order"
+            android:text="服务项目：" />
+
+        <TextView
+            android:id="@+id/tv_fuwu_dec"
+            style="@style/textview_order"
+            android:layout_toRightOf="@id/tv_fuwu"
+            android:text="管道维修" />
+
+        <TextView
+            android:id="@+id/tv_bianhao"
+            style="@style/textview_order"
+            android:layout_below="@id/tv_fuwu"
+            android:text="订单编号：" />
+
+        <TextView
+            android:id="@+id/tv_bianhao_dec"
+            style="@style/textview_order"
+            android:layout_below="@id/tv_fuwu_dec"
+            android:layout_toRightOf="@id/tv_bianhao"
+            android:text="aaaaaaaaa" />
+
+        <TextView
+            android:id="@+id/tv_history_cancel"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/fs_45"
+            android:layout_marginRight="@dimen/ds_80"
+            android:layout_marginTop="@dimen/ds_80"
+            android:layout_alignParentRight="true"
+            android:text="已取消"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/textview_order"
+            android:layout_below="@id/tv_bianhao"
+            android:text="预约时间：" />
+
+        <TextView
+            android:id="@+id/tv_date_dec"
+            style="@style/textview_order"
+            android:layout_below="@id/tv_bianhao_dec"
+            android:layout_toRightOf="@id/tv_bianhao"
+            android:text="2015-09-09" />
+
+        <TextView
+            android:id="@+id/tv_time_dec"
+            style="@style/textview_order"
+            android:layout_below="@id/tv_date_dec"
+            android:layout_toRightOf="@id/tv_bianhao"
+            android:text="08:00--09:00" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/textview_order"
+            android:layout_below="@id/tv_time_dec"
+            android:text="预约地址：" />
+
+        <TextView
+            android:id="@+id/tv_address_dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_time_dec"
+            android:layout_toRightOf="@id/tv_bianhao"
+            android:lineSpacingMultiplier="1.35"
+            android:maxWidth="@dimen/ds_600"
+            android:paddingLeft="@dimen/ds_8"
+            android:paddingRight="@dimen/ds_8"
+            android:paddingTop="@dimen/ds_8"
+            android:text="北京市昌平区昌平aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa昌平区"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_45" />
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_address_dec"
+            android:paddingBottom="@dimen/ds_8"
+            android:paddingLeft="@dimen/ds_8"
+            android:paddingRight="@dimen/ds_8"
+            android:text="已付款："
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_45" />
+
+        <TextView
+            android:id="@+id/tv_price_dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_address_dec"
+            android:layout_toRightOf="@id/tv_bianhao"
+            android:paddingBottom="@dimen/ds_8"
+            android:paddingLeft="@dimen/ds_8"
+            android:paddingRight="@dimen/ds_8"
+            android:text="100元"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_45" />
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_price_dec"
+            android:paddingBottom="@dimen/ds_8"
+            android:paddingLeft="@dimen/ds_8"
+            android:paddingRight="@dimen/ds_8"
+            android:text="电话号码："
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_45" />
+
+        <TextView
+            android:id="@+id/tv_phone_histroy_dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_price_dec"
+            android:layout_toRightOf="@id/tv_phone"
+            android:paddingBottom="@dimen/ds_8"
+            android:paddingLeft="@dimen/ds_8"
+            android:paddingRight="@dimen/ds_8"
+            android:text="13111111111"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/fs_45" />
+
+
+    </RelativeLayout>
+</LinearLayout>
