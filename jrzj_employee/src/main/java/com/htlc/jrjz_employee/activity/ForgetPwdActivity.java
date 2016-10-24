@@ -1,11 +1,8 @@
 package com.htlc.jrjz_employee.activity;
 
 import android.app.AlertDialog;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -13,13 +10,10 @@ import com.htlc.jrjz_employee.AppConfig;
 import com.htlc.jrjz_employee.AppContext;
 import com.htlc.jrjz_employee.R;
 import com.htlc.jrjz_employee.common.base.BaseTitleActivity;
-import com.htlc.jrjz_employee.common.dto.BaseDTO;
 import com.htlc.jrjz_employee.common.entity.BaseEntity;
-import com.htlc.jrjz_employee.common.eventbus.ErrorEvent;
 import com.htlc.jrjz_employee.common.http.CallBack;
 import com.htlc.jrjz_employee.common.http.CommonApiClient;
 import com.htlc.jrjz_employee.common.utils.LogUtils;
-import com.htlc.jrjz_employee.common.utils.PhoneUtils;
 import com.htlc.jrjz_employee.common.utils.TimeUtils;
 import com.htlc.jrjz_employee.common.utils.ToastUtils;
 import com.htlc.jrjz_employee.dto.ForgetPwdDTO;
@@ -28,18 +22,18 @@ import com.htlc.jrjz_employee.dto.ForgetPwdDTO;
 /**
  * 获取验证码倒计时
  */
-public class ForgetPwdActivity extends BaseTitleActivity{
+public class ForgetPwdActivity extends BaseTitleActivity {
 
-    EditText etForgetpwdPhone;
+//    EditText etForgetpwdPhone;
     EditText etOld;
     EditText etNew;
     TextView tvOk;
 
-    private String phone,CodeOld,CodeNew;
+    private String  CodeOld, CodeNew;
 
     public void initView() {
         setTitleText("修改密码");
-        etForgetpwdPhone = (EditText) findViewById(R.id.et_forgetpwd_phone);
+//        etForgetpwdPhone = (EditText) findViewById(R.id.et_forgetpwd_phone);
         etOld = (EditText) findViewById(R.id.et_old);
         etNew = (EditText) findViewById(R.id.et_new);
         tvOk = (TextView) findViewById(R.id.tv_ok);
@@ -66,15 +60,15 @@ public class ForgetPwdActivity extends BaseTitleActivity{
 
 
     private void dataVerify() {
-        phone = etForgetpwdPhone.getText().toString().trim();
+//        phone = etForgetpwdPhone.getText().toString().trim();
         CodeOld = etOld.getText().toString().trim();
         CodeNew = etNew.getText().toString().trim();
         //手机号码格式验证
-        boolean valid = PhoneUtils.isPhoneNumberValid(phone);
-        if (!valid) {
-            new AlertDialog.Builder(this).setTitle("温馨提示").setMessage("请输入正确的电话号码!").setPositiveButton("确定", null).show();
-            return;
-        }
+//        boolean valid = PhoneUtils.isPhoneNumberValid(phone);
+//        if (!valid) {
+//            new AlertDialog.Builder(this).setTitle("温馨提示").setMessage("请输入正确的电话号码!").setPositiveButton("确定", null).show();
+//            return;
+//        }
 
         if (TextUtils.isEmpty(CodeOld)) {
             new AlertDialog.Builder(this).setTitle("温馨提示").setMessage("旧密码不能为空!").setPositiveButton("确定", null).show();
@@ -91,13 +85,14 @@ public class ForgetPwdActivity extends BaseTitleActivity{
 
     private void setNewPwd() {
         long time = TimeUtils.getSignTime();
+        String uid = AppContext.get("uid", "");
         String random = TimeUtils.genNonceStr();
         ForgetPwdDTO forgetPwdDTO = new ForgetPwdDTO();
-        forgetPwdDTO.setUid(phone);
+        forgetPwdDTO.setUid(uid);
         forgetPwdDTO.setTimestamp(time);
         forgetPwdDTO.setRandom(random);
-        forgetPwdDTO.setSign(phone+ time + random);
-        forgetPwdDTO.setAccessToken(AppContext.get("accessToken",""));
+        forgetPwdDTO.setSign(uid + time + random);
+        forgetPwdDTO.setAccessToken(AppContext.get("accessToken", ""));
         forgetPwdDTO.setNewPassword(CodeNew);
         forgetPwdDTO.setOriPassword(CodeOld);
 

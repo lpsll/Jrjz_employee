@@ -9,36 +9,54 @@
         android:layout_height="@dimen/ds_40"
         android:background="#f5f5f5" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/ds_25">
+        android:orientation="horizontal">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ds_20"
+                android:layout_marginTop="@dimen/ds_40"
+                android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_fuwu"
             style="@style/textview_order"
             android:text="服务项目：" />
-
         <TextView
             android:id="@+id/tv_fuwu_dec"
             style="@style/textview_order"
-            android:layout_toRightOf="@id/tv_fuwu"
             android:text="管道维修" />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ds_20"
+                android:layout_marginTop="@dimen/ds_20"
+                android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_bianhao"
             style="@style/textview_order"
-            android:layout_below="@id/tv_fuwu"
             android:text="订单编号：" />
-
         <TextView
             android:id="@+id/tv_bianhao_dec"
             style="@style/textview_order"
-            android:layout_below="@id/tv_fuwu_dec"
-            android:layout_toRightOf="@id/tv_bianhao"
             android:text="aaaaaaaaa" />
+            </LinearLayout>
 
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ds_20"
+                android:layout_marginTop="@dimen/ds_20"
+                android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_time"
             style="@style/textview_order"
@@ -48,37 +66,76 @@
         <TextView
             android:id="@+id/tv_date_dec"
             style="@style/textview_order"
-            android:layout_below="@id/tv_bianhao_dec"
-            android:layout_toRightOf="@id/tv_bianhao"
             android:text="2015-09-09" />
 
         <TextView
             android:id="@+id/tv_time_dec"
             style="@style/textview_order"
-            android:layout_below="@id/tv_date_dec"
-            android:layout_toRightOf="@id/tv_bianhao"
             android:text="10:00--11:00" />
+        </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ds_20"
+                android:layout_marginTop="@dimen/ds_20"
+                android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_address"
             style="@style/textview_order"
-            android:layout_below="@id/tv_time_dec"
             android:text="预约地址：" />
 
         <TextView
             android:id="@+id/tv_address_dec"
             style="@style/textview_order"
-            android:layout_below="@id/tv_time_dec"
-            android:layout_toRightOf="@id/tv_bianhao"
-            android:lineSpacingMultiplier="1.35"
             android:maxWidth="@dimen/ds_570"
             android:text="北京市昌平区昌平区aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa昌平区" />
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ds_20"
+                android:layout_marginTop="@dimen/ds_20"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/textview_order"
+                    android:layout_below="@id/tv_address_dec"
+                    android:text=" 上 门 费 ：" />
 
+                <TextView
+                    android:id="@+id/tv_fy"
+                    style="@style/textview_order"
+                    android:maxWidth="@dimen/ds_570"
+                    android:text="13111111111" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ds_20"
+                android:layout_marginTop="@dimen/ds_20"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/textview_order"
+                    android:layout_below="@id/tv_address_dec"
+                    android:text="客户姓名：" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/textview_order"
+                    android:maxWidth="@dimen/ds_570"
+                    android:text="13111111111" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ds_20"
+                android:layout_marginTop="@dimen/ds_20"
+                android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_phone"
             style="@style/textview_order"
             android:layout_below="@id/tv_address_dec"
-            android:text="电话号码：" />
+            android:text="客户电话：" />
 
         <TextView
             android:id="@+id/tv_doing_phone_dec"
@@ -88,37 +145,49 @@
             android:lineSpacingMultiplier="1.35"
             android:maxWidth="@dimen/ds_570"
             android:text="13111111111" />
+</LinearLayout>
 
 
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/ds_20"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_doing_order_receive"
+                style="@style/textview_order_text"
+                android:layout_marginTop="@dimen/ds_40"
+                android:text="接单"
+               />
         <TextView
             android:id="@+id/tv_doing_order_todoorder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="@dimen/ds_60"
-            android:background="@drawable/top_up_selector"
-            android:paddingBottom="@dimen/ds_20"
-            android:paddingLeft="@dimen/ds_25"
-            android:paddingRight="@dimen/ds_25"
-            android:paddingTop="@dimen/ds_20"
+            style="@style/textview_order_text"
+            android:layout_marginTop="@dimen/ds_50"
             android:text="  去服务  "
-            android:textColor="@drawable/top_up_text_selector"
-            android:textSize="@dimen/fs_40" />
+            />
 
         <TextView
             android:id="@+id/tv_product_order"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="@dimen/ds_280"
-            android:background="@drawable/top_up_selector"
-            android:paddingBottom="@dimen/ds_20"
-            android:paddingLeft="@dimen/ds_25"
-            android:paddingRight="@dimen/ds_25"
-            android:paddingTop="@dimen/ds_20"
+            style="@style/textview_order_text"
             android:text="生成订单"
-            android:textColor="@drawable/top_up_text_selector"
-            android:textSize="@dimen/fs_40" />
+            android:layout_marginTop="@dimen/ds_50"
+           />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_product_ipone"
+            style="@style/textview_order_text"
+            android:layout_marginTop="@dimen/ds_50"
+            android:text="电话"
+          />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>

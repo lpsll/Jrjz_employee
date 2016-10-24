@@ -26,6 +26,16 @@ public class OrderBookedEntity {
     private String empId;
     private String phone;
 
+    public String getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(String totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    private String totalAmount;
+
     public String getPhone() {
         return phone;
     }

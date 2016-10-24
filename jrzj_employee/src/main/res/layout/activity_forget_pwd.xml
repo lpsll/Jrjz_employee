@@ -6,31 +6,31 @@
     android:background="@color/linear_gray"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingBottom="@dimen/ds_50"
-        android:paddingLeft="@dimen/ds_70"
-        android:paddingTop="@dimen/ds_50">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#ffffff"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingBottom="@dimen/ds_50"-->
+        <!--android:paddingLeft="@dimen/ds_70"-->
+        <!--android:paddingTop="@dimen/ds_50">-->
 
 
-        <EditText
-            android:maxLength="11"
-            android:id="@+id/et_forgetpwd_phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="请输入手机号"
-            android:inputType="number"
-            android:textColorHint="@color/color_c6"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:textSize="@dimen/fs_50" />
+        <!--<EditText-->
+            <!--android:maxLength="11"-->
+            <!--android:id="@+id/et_forgetpwd_phone"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@null"-->
+            <!--android:hint="请输入手机号"-->
+            <!--android:inputType="number"-->
+            <!--android:textColorHint="@color/color_c6"-->
+            <!--android:textCursorDrawable="@drawable/color_cursor"-->
+            <!--android:textSize="@dimen/fs_50" />-->
 
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
 
     <View

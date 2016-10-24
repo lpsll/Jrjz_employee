@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/prompt_box_no"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/prompt_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_120"
+        android:textSize="@dimen/fs_50"
+        android:gravity="center"
+        android:text="@string/dialog_prompt"
+        android:textColor="@color/color_00"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_1"
+        android:background="@color/color_cc"/>
+    <TextView
+        android:paddingTop="@dimen/ds_20"
+        android:paddingBottom="@dimen/ds_20"
+        android:id="@+id/prompt_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/dialog_prompt_no"
+        android:textSize="@dimen/fs_50"
+        android:textColor="@color/color_00"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ds_1"
+        android:background="@color/color_cc"/>
+    <Button
+        android:id="@+id/prompt_tv_yes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:textSize="@dimen/fs_60"
+        android:gravity="center"
+        android:text="@string/dialog_prompt_yes"
+        android:textColor="@color/colorPrimaryDark"/>
+
+</LinearLayout>

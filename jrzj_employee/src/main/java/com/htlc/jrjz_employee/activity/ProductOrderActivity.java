@@ -27,8 +27,11 @@ import com.htlc.jrjz_employee.common.utils.TDevice;
 import com.htlc.jrjz_employee.common.utils.TimeUtils;
 import com.htlc.jrjz_employee.common.utils.ToastUtils;
 import com.htlc.jrjz_employee.dto.CreateOrderDTO;
+import com.htlc.jrjz_employee.entity.OrderEvent;
 import com.htlc.jrjz_employee.util.EditInputFilter;
 import com.htlc.jrjz_employee.util.StringUtils;
+
+import de.greenrobot.event.EventBus;
 
 
 public class ProductOrderActivity extends AppCompatActivity implements View.OnClickListener {

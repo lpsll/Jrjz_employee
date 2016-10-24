@@ -1,35 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.htlc.jrjz_employee.activity.BaiduMapActivity">
 
-
-    <com.baidu.mapapi.map.MapView
-        android:id="@+id/bmapView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:clickable="true" />
-
-    <TextView
-        android:textStyle="bold"
-        android:gravity="center"
-        android:id="@+id/tv_address"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/ds_50"
-        android:layout_marginLeft="@dimen/ds_180"
-        android:layout_marginRight="@dimen/ds_180"
-        android:background="@drawable/baidu_address"
-        android:maxWidth="@dimen/ds_600"
-        android:paddingLeft="@dimen/ds_30"
-        android:paddingRight="@dimen/ds_30"
-        android:paddingTop="@dimen/ds_7"
-        android:paddingBottom="@dimen/ds_7"
-        android:text="adfdfddddddddd"
-        android:textColor="#ffffff"
-        android:textSize="@dimen/fs_43" />
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <Button
+            android:layout_width="@dimen/ds_350"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="bus"
+            android:text="公交"
+            android:textColor="@color/navi" />
+
+        <Button
+            android:layout_width="@dimen/ds_350"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="drive"
+            android:text="驾车"
+            android:textColor="@color/navi" />
+
+        <Button
+            android:layout_width="@dimen/ds_350"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="walk"
+            android:text="步行"
+            android:textColor="@color/navi" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/ds_50"
+            android:layout_marginLeft="@dimen/ds_180"
+            android:layout_marginRight="@dimen/ds_180"
+            android:background="@drawable/baidu_address"
+            android:gravity="center"
+            android:maxWidth="@dimen/ds_600"
+            android:paddingBottom="@dimen/ds_7"
+            android:paddingLeft="@dimen/ds_30"
+            android:paddingRight="@dimen/ds_30"
+            android:paddingTop="@dimen/ds_7"
+            android:text="adfdfddddddddd"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/fs_43"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</LinearLayout>
